@@ -1,21 +1,30 @@
 import React from 'react';
-import './Dashboard.css'
-import aicon from './aicon.jpg';
-import CryptoNames from './CryptoNames'
+import './Dashboard.css';
+
+
 
 
 const DashBoard =(props)=>{
-    console.log(props.rates);
-    console.log(props.names)
-   
-
-    // wont work cos there is two sets of data and there is one loop
     
-  const names =  props.names.map((name,index)=>{  
+    console.log("names",props.cryptoList);
+    
+  const lists =  props.cryptoList.map((list,index)=>{  
 
        return(
 
-           <CryptoNames  key={index} rates={props.rates}/>
+           <div className="Dash"  key={index} >
+                <div>
+                    <img src={list.icon_url} alt="" width="100"/>
+                    <h3>{list.name_full}</h3>                 
+                </div>
+                
+                <div>
+                    <p style={{fontWeight:'bold',color:'grey'}}>Max Supply:{list.max_supply}</p>
+
+                </div>
+                
+
+           </div>
         
        )
         
@@ -23,8 +32,8 @@ const DashBoard =(props)=>{
     
 
     return (
-        <div  >
-         {names}          
+        <div style={{display:'flex',flexDirection:'row',flexWrap:'Wrap'}}>
+         {lists}          
         </div>
     )
    

@@ -7,15 +7,8 @@ import './App.css';
 
 class App extends Component{
 
-  state={
-    
-    
-    rates:[],
-    names:[],
-    
-
-    
-
+  state={ 
+    names:[]
   }
 
  
@@ -23,19 +16,7 @@ class App extends Component{
 
 
   componentDidMount(){
-    fetch('http://api.coinlayer.com/live?access_key=c8c0ef65a659c37726364c68e6fdb887&expand=1')
-    .then((response)=>response.json())
-    .then((data)=>{ 
-      // console.log(data)
-      
-      let list =[];
-       Object.keys(data.rates).forEach(key=>{
-        list.push(data.rates[key]);    
-      })
-      this.setState({rates:list}) 
-    });
-
-
+   
     fetch('http://api.coinlayer.com/list?access_key=c8c0ef65a659c37726364c68e6fdb887')
     .then((response)=>response.json())
     .then((data)=>{
@@ -57,18 +38,25 @@ class App extends Component{
   
   render(){
 
-  
+ 
  
    
     
     return(
-      <div className="Body">
-        <div className="Navbar"><h1 style={{textAlign:'center'}}>Crypto Dashboard</h1></div>
-        <h1 style={{color:'white'}}>there are {this.state.rates.length} cryptos in here</h1>
-        
-      {/* dont be confused by the props and the state i passed into the components below */}
+      <div>
 
-        <DashBoard names={this.state.rates}  cryptoList={this.state.names} /> 
+         <div className="Navbar"><h1 style={{textAlign:'center'}}>Crypto Dashboard</h1></div>
+         
+          <div className="Body">
+            <h1  style={{color:'white',textAlign:'center'}}>There are {this.state.names.length} cryptos in here</h1>
+            <DashBoard   cryptoList={this.state.names} /> 
+          </div>
+       
+        
+        
+    
+
+       
         
        
 
