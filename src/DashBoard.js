@@ -6,7 +6,7 @@ import './Dashboard.css';
 
 const DashBoard =(props)=>{
     
-    console.log("names",props.cryptoList);
+    
     
   const lists =  props.cryptoList.map((list,index)=>{  
 

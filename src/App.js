@@ -36,35 +36,28 @@ class App extends Component{
 
 
 onSearch =(event)=>{
-  console.log(event.target.value)
+  this.setState({search:event.target.value})
+ 
+  
 }
   
   
   render(){
-
- 
- 
+   
+    const filteredNames = this.state.names.filter(element=>{
+      return element.name_full.toLowerCase().includes(this.state.search.toLowerCase())
+    })
    
     
     return(
       <div>
-
          <div className="Navbar"><h1 style={{textAlign:'center'}}>Crypto Dashboard</h1></div>
          
           <div className="Body" style={{position:'relative',left:'45px'}}>
             <h1  style={{color:'white',textAlign:'center'}}>There are {this.state.names.length} cryptos in here</h1>
             <SearchBar search={this.onSearch} />
-            <DashBoard   cryptoList={this.state.names} /> 
-          </div>
-       
-        
-        
-    
-
-       
-        
-       
-
+            <DashBoard  cryptoList={filteredNames}   /> 
+          </div>      
       </div>
     )
   }

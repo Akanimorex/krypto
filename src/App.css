@@ -1,7 +1,7 @@
 html,body{
   margin:0;
   padding:0;
-  background-color: #1a1a1a;
+  background-image: linear-gradient(to right, #000000, #1a1a1a);
   width: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -10,7 +10,7 @@ html,body{
   padding: 0;
 }
 .Navbar{
-  background-color: yellow;
+  background-color: rgb(235, 235, 134);
   padding: 30px;
   /* position: fixed;
   width:100%;
@@ -19,6 +19,7 @@ html,body{
 }
 .Body{
   margin-top:40px;
+  width: 100%;
 }
 
 
