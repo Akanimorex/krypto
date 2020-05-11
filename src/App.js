@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import DashBoard from './DashBoard';
+import  SearchBar from './SearchBar'
 import './App.css';
 
 
@@ -8,7 +9,8 @@ import './App.css';
 class App extends Component{
 
   state={ 
-    names:[]
+    names:[],
+    search:''
   }
 
  
@@ -29,11 +31,13 @@ class App extends Component{
 
     
     })
-
-
-    
-  
+     
   }
+
+
+onSearch =(event)=>{
+  console.log(event.target.value)
+}
   
   
   render(){
@@ -47,8 +51,9 @@ class App extends Component{
 
          <div className="Navbar"><h1 style={{textAlign:'center'}}>Crypto Dashboard</h1></div>
          
-          <div className="Body">
+          <div className="Body" style={{position:'relative',left:'45px'}}>
             <h1  style={{color:'white',textAlign:'center'}}>There are {this.state.names.length} cryptos in here</h1>
+            <SearchBar search={this.onSearch} />
             <DashBoard   cryptoList={this.state.names} /> 
           </div>
        

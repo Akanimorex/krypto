@@ -15,5 +15,21 @@
     justify-content: space-between;
     align-items: stretch;
     overflow: hidden;
+    transition:ease-in-out 0.5s;
 
+}
+
+.Dash:hover{
+    z-index:999;
+    
+    box-shadow: 0px 1px 20px 1px #fff;
+}
+
+
+input[type="search"]{
+    padding:20px;
+    width: 90%;
+    border-radius:20px;
+    box-shadow: 0px 1px 11px 1px #fff;
+    border:solid 1px red;
 }
