@@ -38,3 +38,21 @@ input[type="search"]{
     margin:20px;
 
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    input[type="search"]{
+       
+        position: relative;
+        left:0;
+        
+    
+    }
+
+    .Dash{
+        position: relative;
+        left: 0;
+    }
+    
+}
