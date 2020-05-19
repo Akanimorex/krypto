@@ -32,7 +32,7 @@ const DashBoard =(props)=>{
     
 
     return (
-        <div style={{display:'flex',flexDirection:'row',flexWrap:'Wrap'}}>
+        <div style={{display:'flex',flexDirection:'row',flexWrap:'Wrap',justifyContent:'center',alignContent:'center'}}>
          {lists}          
         </div>
     )
