@@ -28,7 +28,7 @@
     z-index:999;
     
     box-shadow: 0px 1px 20px 1px #fff;
-    transform: translate(3);
+    transform: translate(10px);
 }
 
 
@@ -36,16 +36,16 @@ input[type="search"]{
     padding:20px;
     font-size: 15px;
     border:outset 1px ;
-    width: 90%;
     background-color: #ccffff;
-    /* position: relative;
-    left:35%; */
     font-weight: bold;
-    position: absolute;
-    left: 50px;
-    right: 50px;
-    top: 0;
+  
 
+}
+.Search{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 
