@@ -10,8 +10,9 @@ html,body{
 }
 
 .Navbar{
-  background-color: rgb(235, 235, 134);
+  background-color: #012862;
   padding: 30px;
+  color: #fff;
   
  
 }
