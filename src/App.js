@@ -54,7 +54,7 @@ onSearch =(event)=>{
          <div className="Navbar"><h1 style={{textAlign:'center'}}>Crypto Dashboard</h1></div>
          
           <div className="Body" style={{position:'relative'}}>
-            <h1  style={{color:'white',textAlign:'center'}}>There are {this.state.names.length} cryptos in here</h1>
+            <h1  style={{textAlign:'center'}}>There are {this.state.names.length} cryptos in here</h1>
             <SearchBar search={this.onSearch} />
             <DashBoard  cryptoList={filteredNames}   /> 
           </div>      
