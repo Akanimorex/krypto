@@ -10,7 +10,7 @@
     position: relative;
     top: 20px;
     left: 29px;
-    border:solid 1px grey;
+    /* border:solid 1px grey; */
     border-radius: 11px;
     background-color: 	#E0FFFF;
     box-shadow: 0px 1px 11px 1px #fff;
@@ -28,7 +28,7 @@
     z-index:999;
     
     box-shadow: 0px 1px 20px 1px #fff;
-    transform: translate(10px);
+    transform: translate(0,-10px);
 }
 
 
